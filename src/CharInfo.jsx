@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+
 
 class CharInfo extends Component {
    constructor(props) {
@@ -40,9 +40,12 @@ class CharInfo extends Component {
             
                 <p className="btn btn-warning" onClick={this.close}>Hide Info</p>
                 <ul>
-                    <li> <h4>Films: {info.films }</h4></li>
-                    <li><h2>Birth date: {info.birth_year}</h2></li> 
-            <li><h2>Hair color: {info.hair_color}</h2></li> 
+                    <li> <h4>gender: {info.gender }</h4></li>
+                    <li><h2>Skin Color: {info.skin_color}</h2></li> 
+                    <li><h2>Hair color: {info.hair_color}</h2></li> 
+                    <li><h2>Mass: {info.mass}</h2></li> 
+                    <li><h2>Mass: {info.mass}</h2></li> 
+                    <li><h2>height: {info.height}</h2></li> 
                 </ul>                  
                
                  

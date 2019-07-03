@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import List from './List';
+import FilmList from './FilmList';
+
 
 
 class App extends Component {
@@ -37,9 +39,22 @@ class App extends Component {
   }
   render() {
     const {people} = this.state;
+    const {film} = this.state;
         return(
 <div className="App">
-  <List people = {people}/>
+  <div className="row">
+    <div className="col-sm-6">
+      <h2 className="char-name">Characters</h2>
+      <List people = {people}/>
+      </div>
+    <div className="col-sm-6"> 
+    <h2 className="char-name">Films</h2>
+    <FilmList film = {film}/></div>
+  
+  </div>
+   
+ 
+ 
      
      </div>
     );

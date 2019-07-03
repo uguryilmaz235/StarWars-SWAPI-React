@@ -1,25 +1,44 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 class FilmInfo extends Component{
     constructor(props){
         super(props);
         this.state = {
-            films: [],
+            expanded:false,
         }
+        this.open = this.open.bind(this);
+        this.close = this.close.bind(this);
     }
+    open(){
+        this.setState({expanded: !this.state.expanded})
+        }
+        close(){
+        this.setState({expanded: !this.state.expanded})
+        }
+
+
+
+    render(){
+        const info = this.props.filmInfo;
+        if(!this.state.expanded){
+            return<p className = "btn btn-info" onClick= {this.open} >
+                Show Info
+            </p>
+        }
+   
+        return(
+              <div className="">
+              
+            
+                <p className="btn btn-warning" onClick={this.close}>Hide Info</p>
+                <ul>
+                    <li> <h4>director: {info.director }</h4></li>
+                    <li><h2>producer: {info.producer}</h2></li> 
+            <li><h2>release_date: {info.release_date}</h2></li> 
+                </ul>                  
+               
+                 
+            </div>
+        );
+     }
 }
-render(){
-    const info = this.props.chafInfo;
-    return(
-        <div className="">
-            {
-                (info.films).map((item)=>
-                console.log(item)
-                return axios.get(f)
-                .then((response)=>{
-                    console.log(response.data.results);
-                }))
-            }
-        </div>
-    )
-}
+export default FilmInfo;
