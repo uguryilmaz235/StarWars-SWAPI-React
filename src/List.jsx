@@ -14,11 +14,11 @@ class List extends Component {
             console.log(p)
             return(
                  <div className="card text-white bg-dark mb-3" key={p.url}>
-                 <div className="card-body">
-                 <h5 className="card-title"> {p.name}</h5>
-                 <p className="card-text"> <CharInfo charInfo = {p}/></p>
-                 </div>
-    </div>
+                    <div className="card-body">
+                        <h5 className="card-title"> {p.name}</h5>
+                         <p className="card-text"> <CharInfo charInfo = {p}/></p>
+                     </div>
+              </div>
                
             )
             })
