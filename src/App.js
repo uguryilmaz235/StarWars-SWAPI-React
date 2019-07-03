@@ -9,10 +9,20 @@ class App extends Component {
 
     this.state = {
       people: [], 
+      film: [],
+     
     }
     this.getPeople = this.getPeople.bind(this)
+    this.getFilm = this.getFilm.bind(this)
   }
 
+  getFilm(){
+    return axios.get("https://swapi.co/api/films")
+    .then((response) => {
+      console.log(response.data.results);
+      this.setState({film: response.data.results})
+    })
+  }
   getPeople(){
     return axios.get("https://swapi.co/api/people")
     .then((response) => {
@@ -20,8 +30,10 @@ class App extends Component {
       this.setState({people: response.data.results})
     })
   }
+
   componentDidMount(){
     this.getPeople()
+    this.getFilm()
   }
   render() {
     const {people} = this.state;

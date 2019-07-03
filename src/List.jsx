@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import CharInfo from './CharInfo';
+
 class List extends Component {
     render() {
         const people = this.props.people;
+       
 
             return(
     <div className="">
@@ -15,6 +17,7 @@ class List extends Component {
                     {p.name}    
                     </h1>
                     <CharInfo charInfo = {p}/>
+                   
                 </div>
             )
             })
