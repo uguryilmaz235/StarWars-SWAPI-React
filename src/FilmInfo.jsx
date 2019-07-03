@@ -19,6 +19,7 @@ class FilmInfo extends Component{
 
     render(){
         const info = this.props.filmInfo;
+        const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         if(!this.state.expanded){
             return<p className = "btn btn-info" onClick= {this.open} >
                 Show Info
@@ -26,14 +27,14 @@ class FilmInfo extends Component{
         }
    
         return(
-              <div className="">
+              <div className="border border-dark">
               
             
                 <p className="btn btn-warning" onClick={this.close}>Hide Info</p>
                 <ul>
-                    <li> <h4>director: {info.director }</h4></li>
-                    <li><h2>producer: {info.producer}</h2></li> 
-            <li><h2>release_date: {info.release_date}</h2></li> 
+                    <li> <h2 className="char-name">Director: {(info.director).toUpperCase() }</h2></li>
+                    <li><h2 className="char-name">Producer: {(info.producer).toUpperCase()}</h2></li> 
+            <li><h2 className="char-name">Release date: {(info.release_date)}</h2></li> 
                 </ul>                  
                
                  

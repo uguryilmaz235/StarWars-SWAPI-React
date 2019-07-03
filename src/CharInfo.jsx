@@ -35,17 +35,16 @@ class CharInfo extends Component {
         return(
             
           
-            <div className="">
+            <div className="border border-dark">
               
             
                 <p className="btn btn-warning" onClick={this.close}>Hide Info</p>
                 <ul>
-                    <li> <h4>gender: {info.gender }</h4></li>
-                    <li><h2>Skin Color: {info.skin_color}</h2></li> 
-                    <li><h2>Hair color: {info.hair_color}</h2></li> 
-                    <li><h2>Mass: {info.mass}</h2></li> 
-                    <li><h2>Mass: {info.mass}</h2></li> 
-                    <li><h2>height: {info.height}</h2></li> 
+                    <li> <h2 className="char-name">Gender: {(info.gender).toUpperCase() }</h2></li>
+                    <li><h2 className="char-name">Skin Color: {(info.skin_color).toUpperCase()}</h2></li> 
+                    <li><h2 className="char-name">Hair color: {(info.hair_color).toUpperCase()}</h2></li> 
+                    <li><h2 className="char-name">Mass: {(info.mass).toUpperCase()}</h2></li> 
+                    <li><h2 className="char-name">Height: {(info.height).toUpperCase()}</h2></li> 
                 </ul>                  
                
                  
