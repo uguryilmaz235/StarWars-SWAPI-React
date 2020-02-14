@@ -55,6 +55,7 @@ class CharInfo extends Component {
             <h2 className="char-name">Height: {info.height.toUpperCase()}</h2>
           </li>
           <h3>Films:</h3>
+
           <li>
             {info.films.map(f => {
               return <GetFilm films={f} />;
