@@ -1,9 +1,11 @@
 ### This project is a homework for JS Camp 
 
 ## Available Scripts
+after 
+### `npm install`
+command, to install node_modules
 
-In the project directory, you can run:
-
+In the project directory, you can run 
 ### `npm start`
 
 Runs the app in the development mode.<br>
