@@ -2,29 +2,13 @@ body {
   margin: 40;
   padding: 0;
   font-family: sans-serif;
-  color: #ff6138;
+  color: rgb(7, 40, 112);
   background: rgba(0, 0, 0, 0)
     linear-gradient(to right, rgb(0, 255, 255), rgb(255, 128, 128)) repeat
     scroll 0% 0%;
 }
 
-.jumbotron {
-  background-color: #112f41;
-}
-
-.user-details {
-  padding: 10px;
-  background: #086970;
-  border-radius: 10px;
-}
-
-ul {
-  list-style: none;
-}
-.char-name {
-  color: #ff6138;
-}
-
-p {
-  color: #ff6138;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
